@@ -1,0 +1,50 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "ng serve",
+            "type": "shell",
+            "command": "ng",
+            "args": [
+                "serve",
+                "--host",
+                "0.0.0.0"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$tsc"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/src"
+            }
+        },
+        {
+            "label": "ng build",
+            "type": "shell",
+            "command": "ng",
+            "args": [
+                "build",
+                "--prod"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$tsc"
+            ]
+        },
+        {
+            "label": "ng test",
+            "type": "shell",
+            "command": "ng",
+            "args": [
+                "test"
+            ],
+            "group": "test",
+            "problemMatcher": [
+                "$tsc"
+            ]
+        }
+    ]
+}
