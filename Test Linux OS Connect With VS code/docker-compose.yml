@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  v8-dev:
+    build: .
+    ports:
+      - "2223:22"
+    volumes:
+      - v8-volume:/home/vscode/TestLinuxOSConnectWithVSCode
+    environment:
+      - PASSWORD=vscode123
+
+volumes:
+  v8-volume:
