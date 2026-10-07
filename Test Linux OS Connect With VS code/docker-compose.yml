@@ -4,7 +4,9 @@ services:
   v8-dev:
     build: .
     ports:
-      - "2223:22"
+      # SSH is published on the loopback interface only (reach it with
+      # `ssh vscode@localhost -p 2223`). Use "2223:22" to expose it on the network.
+      - "127.0.0.1:2223:22"
     volumes:
       - v8-volume:/home/vscode/TestLinuxOSConnectWithVSCode
     environment:
