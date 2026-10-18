@@ -5,12 +5,12 @@ A collection of Docker examples for containerizing different frameworks and envi
 ## Architecture / How it Works
 
 ```mermaid
-flowchart LR
-    A[User] --> B[Dockers]
-    B --> C{Logic}
-    C --> D[(Data)]
-    C --> E[Output]
-    D --> C
+flowchart TD
+    Angular19
+    React
+    V8Engine
+    TestLinuxVSCode
+    Wordpress
 ```
 
 
