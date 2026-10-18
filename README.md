@@ -2,6 +2,18 @@
 
 A collection of Docker examples for containerizing different frameworks and environments. Each subfolder demonstrates how to write a Dockerfile and docker-compose configuration for a specific technology.
 
+## Architecture / How it Works
+
+```mermaid
+flowchart LR
+    A[User] --> B[Dockers]
+    B --> C{Logic}
+    C --> D[(Data)]
+    C --> E[Output]
+    D --> C
+```
+
+
 ## Examples
 
 ### 1. Angular 19
