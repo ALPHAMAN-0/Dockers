@@ -1,0 +1,27 @@
+# Keep the build context small and keep local-only files out of the image.
+# `COPY . /myapp` in the Dockerfile copies everything that is not listed here.
+
+# Dependencies are installed inside the image by `RUN npm install`
+node_modules
+
+# Build and test output
+build
+coverage
+
+# Environment files (pass settings at run time, e.g. `docker run --env-file`)
+.env
+.env.*
+!.env.example
+
+# Version control, logs and editor/OS files
+.git
+.gitignore
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+.vscode
+
+# Docker files themselves are not needed inside the image
+Dockerfile
+.dockerignore
